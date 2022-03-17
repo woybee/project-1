@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-(blob/Images/Cloud_Network.png)
+(../blob/Images/Cloud_Network.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above.
 
