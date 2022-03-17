@@ -2,14 +2,14 @@
 
 The files in this repository were used to configure the network depicted below.
 
-(Images/Cloud_Network.png)
+(project-1/Images/Cloud_Network.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above.
 
-  (Ansible/docker-playbook.yaml)
-  (Ansible/install-elk.yaml)
-  (Ansible/filebeat-playbook.yaml)
-  (Ansible/metricbeat-playbook.yaml)
+  (project-1/Ansible/docker-playbook.yaml)
+  (project-1/Ansible/install-elk.yaml)
+  (project-1/Ansible/filebeat-playbook.yaml)
+  (project-1/Ansible/metricbeat-playbook.yaml)
 
 This document contains the following details:
 - Description of the Topology
@@ -64,7 +64,7 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 - everyone can see exactly how the network is configured by reading the configuration files.
 - it allows automatic updates to occur to machines on the network whenever the configuration files change.
 
-## Playbook 1: docker-playbook.yml
+### Playbook 1: docker-playbook.yml
 This playbook is used to set up DVWA servers running inside a Docker container. This file was used to configure Web-1 and Web-2. The playbook executes the following tasks:
 
 - Installs Docker
@@ -73,7 +73,7 @@ This playbook is used to set up DVWA servers running inside a Docker container. 
 - Downloads and Launches DVWA Docker Container over Port 80
 - Enables the Docker service
 
-## Playbook 2: install-elk.yml
+### Playbook 2: install-elk.yml
 This playbook is used to set up an ELK server running inside a Docker container. This file was used to configure Elk-Stack-Server. The playbook executes the following tasks:
 
 - Installs Docker
@@ -82,7 +82,7 @@ This playbook is used to set up an ELK server running inside a Docker container.
 - Increase Virtual Memory to 262144 to support the ELK Stack
 - Download and Launch Docker Elk Container (image: sebp/elk:761)
 
-## Playbook 3: filebeat-playbook.yml
+### Playbook 3: filebeat-playbook.yml
 This playbook is used to deploy Filebeat on the Web-1 and Web-2 servers. This allows the elk service on Elk-Stack_Server to monitor log file activity on the webservers. The playbook executes the following tasks:
 
 - Downloads latest Filebeat deb from Kibana
@@ -92,7 +92,7 @@ This playbook is used to deploy Filebeat on the Web-1 and Web-2 servers. This al
 - Setup Filebeat
 - Start Filebeat service -Enable Filebeat service on boot
 
-## Playbook 4: metricbeat-playbook.yml
+### Playbook 4: metricbeat-playbook.yml
 This playbook is used to deploy Metricbeat on the Web-1 and Web-2 servers. This allows the elk service on Elk-Stack_Server to monitor metrics from operating systems and services on the webservers. The playbook executes the following tasks:
 
 - Downloads latest Metricbeat deb from Kibana
@@ -135,7 +135,7 @@ SSH into the control node and follow the steps below:
 
 - Run the playbook.
 
-## Steps to running the playbook
+### Steps to running the playbook
 
 1. From local machine, ssh into the Jump-Box-Provisioner ~$ ssh azadmin@<jump-box-provisioner-ip>
 2. Start the Ansible Docker container ~$ sudo docker start brave_hermann. brave_hermann is the name of the docker container in Jump-Box-Provisioner.
