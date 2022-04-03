@@ -52,16 +52,16 @@ Machines within the network can only be accessed by Jump-Box-Provisioner.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name                 | Publicly Accessible  | Allowed IP Addresses |
-|----------------------|----------------------|----------------------|
-| Jump-Box-Provisioner | Yes (SSH Port 22)    | 198.52.163.249       |
-| Web-1                | Yes (HTTP Port 80)   | 10.0.0.7             |
-| Web-2                | Yes (HTTP Port 80)   | 10.0.0.7             |
-| Web-3                | Yes (HTTP Port 5601) | 10.0.0.7             |
+| Name                 | Publicly Accessible | Allowed IP Addresses |
+|----------------------|---------------------|----------------------|
+| Jump-Box Provisioner | Yes                 | 198.52.163.249       |
+| Web-1                | No                  | 10.0.0.7             |
+| Web-2                | No                  | 10.0.0.7             |
+| Web-3                | No                  | 10.0.0.7             |
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...-
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 
 - it allows quick configuration of new machines in a consistent manor.
 - everyone can see exactly how the network is configured by reading the configuration files.
