@@ -47,23 +47,23 @@ The machines on the internal network are not exposed to the public Internet.
 Only the Jump-Box-Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 198.52.163.249
 
-Machines within the network can only be accessed by Jump-Box-Provisioner.
-10.0.0.4 can access Web-1, Web-2, ELK-Stack-Server using SSH over Port 22.
+Machines within the network can only be accessed by Jump-Box-Provisioner(10.0.0.4).
+10.0.0.4 can access Web-1(DVWA server), Web-2(DVWA server), Web-3(ELK-Stack-Server) using SSH over Port 22.
 
 A summary of the access policies in place can be found in the table below.
 
 | Name                 | Publicly Accessible | Allowed IP Addresses |
 |----------------------|---------------------|----------------------|
 | Jump-Box Provisioner | Yes                 | 198.52.163.249       |
-| Web-1                | No                  | 10.0.0.7             |
-| Web-2                | No                  | 10.0.0.7             |
-| Web-3                | No                  | 10.0.0.7             |
+| Web-1                | No                  | 10.0.0.4             |
+| Web-2                | No                  | 10.0.0.4             |
+| Web-3                | No                  | 10.0.0.4             |
 
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 
-- it allows quick configuration of new machines in a consistent manor.
+- it allows quick configuration of new machines in a consistent manner.
 - everyone can see exactly how the network is configured by reading the configuration files.
 - it allows automatic updates to occur to machines on the network whenever the configuration files change.
 
@@ -107,7 +107,7 @@ This playbook is used to deploy Metricbeat on the Web-1 and Web-2 servers. This 
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-(Images/sudo_docker_ps_command.png)
+[docker ps screenshot](Images/sudo_docker_ps_command.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
