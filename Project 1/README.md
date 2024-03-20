@@ -4,7 +4,7 @@ The files in this repository were used to configure the network depicted below.
 
 [Cloud Network](Images/Cloud%20Network.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment pictured above.
 
   [docker-playboook.yml](Ansible/docker-playbook.yml)
   
@@ -44,7 +44,7 @@ The configuration details of each machine may be found below.
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the Jump-Box-Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+Only the Jump-Box-Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP address:
 198.52.163.249
 
 Machines within the network can only be accessed by Jump-Box-Provisioner(10.0.0.4).
